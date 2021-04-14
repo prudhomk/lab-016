@@ -7,22 +7,27 @@ export function createUser(username, password) {
         password,
         todos: []
     };
+
     updateUser(user);
+
 }
 
 export function updateUser(user) {
-    const stringyUser = JSON.stringify(USER);
-    user = JSON.parse(stringyUser);
 
-    return user;
+    const stringyUser = JSON.stringify(user);
+    // user = JSON.parse(stringyUser); maybe?
+
+    localStorage.setItem(USER, stringyUser);  //maybe?
+
 }
 
-export function getUser(user) {
+export function getUser() {
+
     const stringyUser = localStorage.getItem(USER);
 
-    user = JSON.parse(stringyUser);
+    const parsedUser = JSON.parse(stringyUser);
 
-    return user;
+    return parsedUser;
 }
 
 export function checkUser(username) {
