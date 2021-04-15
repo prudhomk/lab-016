@@ -2,6 +2,11 @@
    font-family: 'FiraSansRegular';
 }
 
+@media only screen and (max-width: 1000px) {
+    body {
+        background-color: var(--hot-pink);
+    }
+}
 body {
 --blue-munsell: hsla(190, 100%, 34%, 1);
 --electric-blue: hsla(180, 95%, 71%, 1);
@@ -32,12 +37,14 @@ main {
 li {
     cursor: pointer;
     margin: 5px;
+    width: 80px;
+    background-color: var(--cosmic-latte);
 }
 
 li:hover {
     transform: scale(1);
-    box-shadow: 2px 2px 2px limegreen;
-    width: 50px;
+    box-shadow: 5px 2px 2px var(--electric-blue);
+    
     text-align: center;
 }
 
@@ -49,20 +56,43 @@ header {
     justify-content: center;
     align-items: center;
     background-color: var(--cosmic-latte);
+    font-size: 65px;
+    font-style: italic;
+}
+
+.login-header {
+    font-size: 40px;
 }
 
 .log-out {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 .log-out button {
     margin-right: 15px;
 }
+
+
 
 button {
     color: var(--cosmic-latte);
     background-color :var(--hot-pink);
     margin-top: 15px;
     border-radius: 5px;
+    size: 30px;
 }
 
+button:active {
+    cursor: pointer;
+    transform: translateY(4px);
+}
+
+audio {
+    position: fixed;
+    top: 1000px;
+}
+
+img {
+    position: absolute;
+    top: 200px;
+}
