@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 
-import { createUser, updateUser, getUser, checkUser, correctLogin, login, logout } from '../to-do-list/local-storage.js';
+import { createUser, updateUser, getUser, checkUser, correctLogin, login, logout } from '../local-storage.js';
 const test = QUnit.test;
 
 test('create user test', (expect) => {
