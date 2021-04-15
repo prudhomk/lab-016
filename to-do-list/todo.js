@@ -35,7 +35,7 @@ function renderLi(todo) {
     return li;
 }
 
-function renderTodos() {
+export function renderTodos() {
     const user = getUser();
     const ul = document.querySelector('ul');
     ul.textContent = '';
