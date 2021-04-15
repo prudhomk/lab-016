@@ -11,7 +11,7 @@ loginUser.addEventListener('submit', (e) => {
     // console.log(username, password);
     if (correctLogin(username, password)) {
         login(username);
-        window.location = '../to-do-list/to-do.html';
+        window.location = './to-do-list/to-do.html';
     } else {
         alert('Incorrect Login Data!  Please try again.');
         window.location = './nouser/index.html';
