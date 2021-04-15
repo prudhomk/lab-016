@@ -68,7 +68,7 @@ renderTodos();
 
 function parade() {
     var myCanvas = document.createElement('canvas');
-    console.log(myCanvas);
+    
 
     var myConfetti = confetti.create(myCanvas, {
         resize: true,
@@ -82,7 +82,7 @@ function parade() {
         // confetti function
     });
     // do this for 30 seconds
-    var duration = 15 * 1000;
+    var duration = 2 * 1000;
     var animationEnd = Date.now() + duration;
     var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
@@ -90,7 +90,7 @@ function parade() {
         return Math.random() * (max - min) + min;
     }
 
-    var interval = setInterval(function () {
+    var interval = setInterval(function() {
         var timeLeft = animationEnd - Date.now();
 
         if (timeLeft <= 0) {
